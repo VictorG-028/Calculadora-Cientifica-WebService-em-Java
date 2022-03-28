@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CalculadoraService" targetNamespace="http://soa.personal.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://soa.personal.br/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://soa.personal.br/" schemaLocation="calculadora_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="sen">
+    <wsdl:part name="parameters" element="tns:sen">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="powResponse">
+    <wsdl:part name="parameters" element="tns:powResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="subtrair">
+    <wsdl:part name="parameters" element="tns:subtrair">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dividir">
+    <wsdl:part name="parameters" element="tns:dividir">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dividirResponse">
+    <wsdl:part name="parameters" element="tns:dividirResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pow">
+    <wsdl:part name="parameters" element="tns:pow">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiplicarResponse">
+    <wsdl:part name="parameters" element="tns:multiplicarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sqrt">
+    <wsdl:part name="parameters" element="tns:sqrt">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tgResponse">
+    <wsdl:part name="parameters" element="tns:tgResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cosResponse">
+    <wsdl:part name="parameters" element="tns:cosResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="senResponse">
+    <wsdl:part name="parameters" element="tns:senResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tg">
+    <wsdl:part name="parameters" element="tns:tg">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="subtrairResponse">
+    <wsdl:part name="parameters" element="tns:subtrairResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiplicar">
+    <wsdl:part name="parameters" element="tns:multiplicar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sqrtResponse">
+    <wsdl:part name="parameters" element="tns:sqrtResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="somar">
+    <wsdl:part name="parameters" element="tns:somar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cos">
+    <wsdl:part name="parameters" element="tns:cos">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="somarResponse">
+    <wsdl:part name="parameters" element="tns:somarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Calculadora">
+    <wsdl:operation name="sen">
+      <wsdl:input name="sen" message="tns:sen">
+    </wsdl:input>
+      <wsdl:output name="senResponse" message="tns:senResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subtrair">
+      <wsdl:input name="subtrair" message="tns:subtrair">
+    </wsdl:input>
+      <wsdl:output name="subtrairResponse" message="tns:subtrairResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiplicar">
+      <wsdl:input name="multiplicar" message="tns:multiplicar">
+    </wsdl:input>
+      <wsdl:output name="multiplicarResponse" message="tns:multiplicarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dividir">
+      <wsdl:input name="dividir" message="tns:dividir">
+    </wsdl:input>
+      <wsdl:output name="dividirResponse" message="tns:dividirResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pow">
+      <wsdl:input name="pow" message="tns:pow">
+    </wsdl:input>
+      <wsdl:output name="powResponse" message="tns:powResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="somar">
+      <wsdl:input name="somar" message="tns:somar">
+    </wsdl:input>
+      <wsdl:output name="somarResponse" message="tns:somarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sqrt">
+      <wsdl:input name="sqrt" message="tns:sqrt">
+    </wsdl:input>
+      <wsdl:output name="sqrtResponse" message="tns:sqrtResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cos">
+      <wsdl:input name="cos" message="tns:cos">
+    </wsdl:input>
+      <wsdl:output name="cosResponse" message="tns:cosResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tg">
+      <wsdl:input name="tg" message="tns:tg">
+    </wsdl:input>
+      <wsdl:output name="tgResponse" message="tns:tgResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculadoraServiceSoapBinding" type="tns:Calculadora">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="sen">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sen">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="senResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subtrair">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="subtrair">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="subtrairResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiplicar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="multiplicar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="multiplicarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dividir">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="dividir">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="dividirResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pow">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="pow">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="powResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="somar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="somar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="somarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sqrt">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sqrt">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sqrtResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cos">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cos">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cosResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tg">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="tg">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="tgResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculadoraService">
+    <wsdl:port name="CalculadoraPort" binding="tns:CalculadoraServiceSoapBinding">
+      <soap:address location="http://localhost:8080/CalculadoraCientifica/services/CalculadoraPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
